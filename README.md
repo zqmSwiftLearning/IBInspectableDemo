@@ -1,0 +1,2 @@
+# IBInspectableDemo
+Swift IBInspectable
