@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DRm-aL-PWF">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="dBg-RV-UYZ">
+            <objects>
+                <viewController id="DRm-aL-PWF" customClass="ViewController" customModule="IBInspectableDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YJa-Ul-l9R"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Xb-A9-PfJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i0v-cG-SeY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="suY-It-jjD" customClass="RatingBarView" customModule="IBInspectableDemo" customModuleProvider="target">
+                                <rect key="frame" x="133" y="80" width="110" height="22"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Czx-Bj-ILM"/>
+                                    <constraint firstAttribute="width" constant="110" id="sVT-2b-GZz"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qd5-Mw-ZZE" customClass="RatingBar" customModule="IBInspectableDemo" customModuleProvider="target">
+                                <rect key="frame" x="133" y="323" width="110" height="22"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="7E1-2R-dea"/>
+                                    <constraint firstAttribute="height" constant="22" id="QBa-la-5v9"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSelected" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97723067429999999" green="1" blue="0.66470497529999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="suY-It-jjD" firstAttribute="top" secondItem="YJa-Ul-l9R" secondAttribute="bottom" constant="60" id="PS3-p0-6Wq"/>
+                            <constraint firstAttribute="centerX" secondItem="suY-It-jjD" secondAttribute="centerX" id="geI-af-gIN"/>
+                            <constraint firstAttribute="centerX" secondItem="Qd5-Mw-ZZE" secondAttribute="centerX" id="laD-qL-HYK"/>
+                            <constraint firstAttribute="centerY" secondItem="Qd5-Mw-ZZE" secondAttribute="centerY" id="tZT-G1-7BK"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="ratingBar" destination="Qd5-Mw-ZZE" id="EbM-45-Bxz"/>
+                        <outlet property="ratingBarView" destination="suY-It-jjD" id="0rf-4B-awK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HUU-Jg-qb3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-477.5" y="-27.5"/>
+        </scene>
+    </scenes>
+</document>
