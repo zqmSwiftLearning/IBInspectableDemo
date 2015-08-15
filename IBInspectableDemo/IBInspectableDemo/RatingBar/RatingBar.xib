@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RatingBar" customModule="IBInspectableDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="ivBackground" destination="TFg-m0-mOI" id="cdu-lw-CKe"/>
+                <outlet property="ivForeground" destination="Z5V-Oh-ky5" id="H4E-Ga-9Ju"/>
+                <outlet property="starHWidth" destination="LOt-H9-QHf" id="IgS-QU-w1A"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="110" height="22"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star_grey" translatesAutoresizingMaskIntoConstraints="NO" id="TFg-m0-mOI">
+                    <rect key="frame" x="0.0" y="0.0" width="110" height="22"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="g5P-qR-man" appends="YES" id="cRR-Os-Hbi"/>
+                    </connections>
+                </imageView>
+                <imageView contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Z5V-Oh-ky5">
+                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="22"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" id="LOt-H9-QHf"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="ONY-zT-23X" appends="YES" id="NJe-UM-fWY"/>
+                    </connections>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="TFg-m0-mOI" secondAttribute="bottom" id="KfU-pi-o7N"/>
+                <constraint firstItem="TFg-m0-mOI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PsW-L6-d1d"/>
+                <constraint firstItem="Z5V-Oh-ky5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RmC-Ie-Dx6"/>
+                <constraint firstItem="TFg-m0-mOI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SQx-7O-tbn"/>
+                <constraint firstAttribute="bottom" secondItem="Z5V-Oh-ky5" secondAttribute="bottom" id="i75-i1-ouu"/>
+                <constraint firstItem="Z5V-Oh-ky5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="q2M-JT-VSG"/>
+                <constraint firstAttribute="trailing" secondItem="TFg-m0-mOI" secondAttribute="trailing" id="thp-1D-IGI"/>
+                <constraint firstAttribute="trailing" secondItem="Z5V-Oh-ky5" secondAttribute="trailing" priority="900" id="zbb-al-Qm5"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="123" y="741"/>
+        </view>
+        <tapGestureRecognizer id="g5P-qR-man" userLabel="greyTap">
+            <connections>
+                <action selector="changeStarNumber:" destination="-1" id="z0e-GX-4sl"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="ONY-zT-23X" userLabel="higtTap">
+            <connections>
+                <action selector="changeStarNumber:" destination="-1" id="hxa-PU-nD1"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="star" width="110" height="22"/>
+        <image name="star_grey" width="110" height="22"/>
+    </resources>
+</document>
